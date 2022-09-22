@@ -1,8 +1,14 @@
+import Box from "components/Box/Box";
+import { Title } from "./Section.styles";
+
 export default function Section ({title, children}) {
   return (
-    <div>
-        <h2>{title}</h2>
+    <Box
+      textAlign="center"
+      p={5}  
+    >
+        <Title>{title}</Title>
         {children}
-    </div>
+    </Box>
   )
 }
