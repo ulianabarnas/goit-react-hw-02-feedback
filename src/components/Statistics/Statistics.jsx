@@ -22,7 +22,7 @@ export default function Statistics ({ good, neutral, bad, total, positivePercent
         textAlign="left">
         <Box
           display={["none", "flex"]}
-          pb="1px"
+          pb="3px"
           pr="2px">
           <AiFillLike fill="#fff" size="20px" />
         </Box>
