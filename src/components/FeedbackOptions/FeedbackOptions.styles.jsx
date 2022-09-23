@@ -7,16 +7,28 @@ export const Button = styled.button`
     border-radius: ${p => p.theme.radii.normal};
     text-transform: capitalize;
     font-weight: ${p => p.theme.fontWeights.bold};
-    color: #5f5f5f;
+    color: ${p => p.theme.colors.white};
     transition: all 100ms linear;
-    box-shadow: ${({children}) => {
+    background-color: ${({ children, theme }) => {
         switch (children) {
             case "good":
-                return '0px 4px 0px 0px #64bb67';
+                return theme.colors.good;
             case "neutral":
-                return '0px 4px 0px 0px #d4d059';
+                return theme.colors.neutral;
             case "bad":
-                return '0px 4px 0px 0px #c8805c';
+                return theme.colors.bad;
+            default:
+                return theme.colors.muted;
+        }
+    }};
+    box-shadow: ${({ children }) => {
+        switch (children) {
+            case "good":
+                return '0px 4px 0px 0px #218324';
+            case "neutral":
+                return '0px 4px 0px 0px #ada818';
+            case "bad":
+                return '0px 4px 0px 0px #c4561f';
             default:
                 return '0px 4px 0px 0px #000000';
         }
@@ -30,17 +42,4 @@ export const Button = styled.button`
         box-shadow: 0px 0px 1px 1px #cbcbcb;
         transform: translateY(4px);
     }
-
-    background-color: ${({children, theme }) => {
-    switch (children) {
-        case "good":
-            return theme.colors.good;
-        case "neutral":
-            return theme.colors.neutral;
-        case "bad":
-            return theme.colors.bad;
-        default:
-            return theme.colors.muted;
-    }
-   }};
 `

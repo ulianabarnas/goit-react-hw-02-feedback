@@ -6,8 +6,8 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
         return <Button key={key} type="button" onClick={() => onLeaveFeedback(key)}>{key}</Button>
     })
     return (
-        <div>
+        <>
             {buttons}
-        </div>
+        </>
     )
 }

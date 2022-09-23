@@ -1,5 +1,7 @@
+import { Message } from "./Notification.styles";
+
 export default function Notification ({message}) {
   return (
-    <p>{message}</p>
+    <Message>{message}</Message>
   )
 }
