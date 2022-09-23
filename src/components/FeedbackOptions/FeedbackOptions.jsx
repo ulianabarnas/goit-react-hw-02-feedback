@@ -1,4 +1,5 @@
-import { Button } from "./FeedbackOptions.styles"
+import PropTypes from 'prop-types';
+import { Button } from "./FeedbackOptions.styles";
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
     const keys = Object.keys(options)
@@ -10,4 +11,9 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
             {buttons}
         </>
     )
+}
+
+FeedbackOptions.propTypes = {
+    options: PropTypes.objectOf(PropTypes.number),
+    onLeaveFeedback: PropTypes.func.isRequired,
 }

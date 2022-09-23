@@ -38,6 +38,22 @@ export const Button = styled.button`
         margin-right: ${p => p.theme.space[4]}px;
     }
 
+    :hover,
+    :focus {
+        background-color: ${({ children, theme }) => {
+            switch (children) {
+            case "good":
+                return theme.colors.goodHover;
+            case "neutral":
+                return theme.colors.neutralHover;
+            case "bad":
+                return theme.colors.badHover;
+            default:
+                return theme.colors.muted;
+            }
+        }};
+    }
+
     :active {
         box-shadow: 0px 0px 1px 1px #cbcbcb;
         transform: translateY(4px);

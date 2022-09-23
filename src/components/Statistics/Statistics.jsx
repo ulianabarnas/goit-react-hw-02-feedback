@@ -1,6 +1,7 @@
+import { AiFillLike } from 'react-icons/ai';
+import PropTypes from 'prop-types';
 import Box from "components/Box/Box";
 import { Text, Value } from "./Statistics.styles";
-import { AiFillLike } from 'react-icons/ai';
 
 export default function Statistics ({ good, neutral, bad, total, positivePercentage }) {
   return (
@@ -31,4 +32,12 @@ export default function Statistics ({ good, neutral, bad, total, positivePercent
       </Box>
     </Box>
   )
+}
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.func.isRequired,
 }

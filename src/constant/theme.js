@@ -9,8 +9,11 @@ export const theme = {
     secondary: '#464646',
     muted: '#f6f6f6',
     good: '#32be36',
+    goodHover: '#26a32a',
     neutral: '#ecd001',
+    neutralHover: '#daba07',
     bad: '#f87e42',
+    badHover: '#eb6928',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fontSizes: {
