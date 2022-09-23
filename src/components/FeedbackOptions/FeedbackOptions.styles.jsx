@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-    width: 80px;
+    display: block;
+    width: 100px;
+    margin: 0 auto;
     padding: ${p => p.theme.space[3]}px;
     border: ${p => p.theme.borders.none};
     border-radius: ${p => p.theme.radii.normal};
@@ -35,9 +37,9 @@ export const Button = styled.button`
     }};
     
     :not(:last-child) {
-        margin-right: ${p => p.theme.space[4]}px;
+        margin-bottom: ${p => p.theme.space[3]}px;
     }
-
+    
     :hover,
     :focus {
         background-color: ${({ children, theme }) => {
@@ -57,5 +59,15 @@ export const Button = styled.button`
     :active {
         box-shadow: 0px 0px 1px 1px #cbcbcb;
         transform: translateY(4px);
+    }
+
+    @media screen and (min-width: 440px) {
+        display: inline-block;
+        width: 80px;
+
+        :not(:last-child) {
+            margin-right: ${p => p.theme.space[4]}px;
+            margin-bottom: 0px;
+        }
     }
 `

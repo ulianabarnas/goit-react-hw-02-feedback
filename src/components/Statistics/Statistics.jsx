@@ -6,7 +6,7 @@ import { Text, Value } from "./Statistics.styles";
 export default function Statistics ({ good, neutral, bad, total, positivePercentage }) {
   return (
     <Box
-      display="flex"
+      display={["block", "flex"]}
       alignItems="flex-end"
       justifyContent="space-between"
     >
@@ -21,14 +21,16 @@ export default function Statistics ({ good, neutral, bad, total, positivePercent
         alignItems="flex-end"
         textAlign="left">
         <Box
+          display={["none", "flex"]}
           pb="1px"
           pr="2px">
           <AiFillLike fill="#fff" size="20px" />
         </Box>
-        <div>
+        <Box
+        mt={[4, 0]}>
           <p><Text>Total: </Text><Value>{total}</Value></p>
           <p><Text>Positive feedback: </Text><Value>{positivePercentage()}%</Value></p>
-        </div>
+        </Box>
       </Box>
     </Box>
   )

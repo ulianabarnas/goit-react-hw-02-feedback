@@ -1,4 +1,5 @@
 export const theme = {
+  breakpoints: ['440px'],
   colors: {
     black: '#000',
     white: '#fff',
@@ -17,7 +18,7 @@ export const theme = {
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fontSizes: {
-    xs: '12px',
+    xs: '14px',
     s: '16px',
     m: '20px',
     l: '26px',
