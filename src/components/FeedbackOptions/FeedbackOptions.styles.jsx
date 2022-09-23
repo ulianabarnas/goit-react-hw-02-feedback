@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const Button = styled.button`
     display: block;
-    width: 100px;
+    width: 120px;
     margin: 0 auto;
     padding: ${p => p.theme.space[3]}px;
     border: ${p => p.theme.borders.none};
     border-radius: ${p => p.theme.radii.normal};
     text-transform: capitalize;
     font-weight: ${p => p.theme.fontWeights.bold};
+    font-size: ${p => p.theme.fontSizes.s};
     color: ${p => p.theme.colors.white};
     transition: all 100ms linear;
     background-color: ${({ children, theme }) => {
