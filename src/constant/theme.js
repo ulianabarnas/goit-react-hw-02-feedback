@@ -4,7 +4,7 @@ export const theme = {
     white: '#fff',
     text: '#2a2a2a',
     background: '#fff',
-    primary: 'teal',
+    primary: '#008080',
     secondary: '#aaa',
     muted: '#f6f6f6',
     good: '#81f485',
@@ -14,7 +14,7 @@ export const theme = {
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fontSizes: {
     xs: '12px',
-    s: '14px',
+    s: '16px',
     m: '20px',
     l: '26px',
     xl: '32px',
@@ -37,6 +37,6 @@ export const theme = {
     round: '50%',
   },
   shadows: {
-    normal: '0px 0px 4px 2px rgba(0,0,0,0.25)',
+    normal: '0px 0px 2px 2px rgba(0 0 0 / 0.1)',
   },
 };

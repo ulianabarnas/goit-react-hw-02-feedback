@@ -1,18 +1,24 @@
 import Box from "components/Box/Box";
+import { Text } from "./Statistics.styles";
 
 export default function Statistics ({ good, neutral, bad, total, positivePercentage }) {
   return (
-    <div>
+    <Box
+      display="flex"
+      alignItems="flex-end"
+      justifyContent="space-between"
+    >
       <Box
-        display="flex"
-        justifyContent="space-around"
-        >
-        <p>Good: {good}</p>
-        <p>Neutral: {neutral}</p>
-        <p>Bad: {bad}</p>
+      textAlign="left">
+        <p><Text>Good: </Text>{good}</p>
+        <p><Text>Neutral: </Text>{neutral}</p>
+        <p><Text>Bad: </Text>{bad}</p>
       </Box>
-        <p>Total: {total}</p>
-        <p>Positive feedback: {positivePercentage()}%</p>
-    </div>
+      <Box
+      textAlign="left">
+        <p><Text>Total: </Text>{total}</p>
+        <p><Text>Positive feedback: </Text>{positivePercentage()}%</p>
+      </Box>
+    </Box>
   )
 }

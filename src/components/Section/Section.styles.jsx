@@ -6,3 +6,14 @@ export const Title = styled.h2`
     margin-bottom: ${p => p.theme.space[4]}px;
     text-transform: uppercase;
 `
+export const Wrapper = styled.div`
+    padding: ${p => p.theme.space[5]}px;
+
+    :last-child {
+        background-color: ${p => p.theme.colors.primary};
+    }
+
+    :last-child h2 {
+        color: ${p => p.theme.colors.white};
+    }
+`

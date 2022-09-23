@@ -39,12 +39,16 @@ export default class App extends Component {
 
     return (
       <Box
-        width="80%"
-        // height="100vh"
+        as="section"
+        maxWidth="400px"
+        width="80vw"
+        textAlign="center"
         mx="auto"
         mt={5}
-        as="section"
         bg="white"
+        borderRadius="normal"
+        boxShadow="normal"
+        overflow="hidden"
         >
         <Section title="Please leave feedback">
           <FeedbackOptions
